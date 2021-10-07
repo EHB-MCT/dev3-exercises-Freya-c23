@@ -1,14 +1,12 @@
 fun main(args: Array<String>){
     print("choose: rock, paper or scissor: ")
-    val enteredString = readLine()
+    var enteredString = readLine()
     while (enteredString != "stop"){
         print("choose: rock, paper or scissor: ")
-        val enteredString = readLine()
-
+        var enteredString = readLine()
         val options = arrayOf("rock","paper","scissor")
         var comp = options.random()
         println("computer says: $comp")
-
         if (comp == enteredString){
             println("Tie")
         } else if(comp == "rock" && enteredString == "scissor"){
@@ -26,3 +24,4 @@ fun main(args: Array<String>){
         }
     }
 }
+
