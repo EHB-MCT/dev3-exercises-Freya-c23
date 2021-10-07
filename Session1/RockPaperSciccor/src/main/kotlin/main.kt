@@ -1,6 +1,5 @@
 fun main(args: Array<String>){
-    print("choose: rock, paper or scissor: ")
-    var enteredString = readLine()
+    var enteredString = ""
     while (enteredString != "stop"){
         print("choose: rock, paper or scissor: ")
         var enteredString = readLine()
