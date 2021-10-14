@@ -88,7 +88,6 @@ fun challengeFour(){
 
     do{
         println("You have found the right portal!")
-        win()
         challengeFive()
     }while (numberAnswer == random())
 
@@ -98,6 +97,7 @@ fun random(): Int{
     return random
 }
 fun challengeFive(){
+    println("You fly trough the portal and arrive to the final boss!")
 
 }
 fun win(){
