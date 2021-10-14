@@ -1,6 +1,11 @@
+import kotlin.random.Random
+
 fun main(){
     println("Hello world")
     challengeOne()
+    if(challengeOne() == win()){
+        challengeTwo()
+    }
 }
 fun challengeOne(){
     println("Intro challenge 1")
@@ -14,6 +19,28 @@ fun challengeOne(){
         gameOver()
     }
 }
+fun challengeTwo(){
+    println("Congratulations for completing the first challenge!  \n In this challenge the fate of Spyro is up to you! " +
+            "\n There is a Gnorc blocking the way and he will only let you pass if you choose the right number! \n " +
+            "You can choose to answer: \"low\" (between 1-3) or \"high\" (between 4-6)")
+    val userAnswer = readLine();
+
+    if (rollDice() == userAnswer){
+        win()
+    }else{
+        gameOver()
+    }
+}
+fun rollDice():String{
+    val random = Random.nextInt(1,6)
+    if(random <= 3){
+        return "low"
+    }else{
+        return "high"
+    }
+}
+
+
 
 fun win(){
     println("WOHOOO you can go to the next level now!")
