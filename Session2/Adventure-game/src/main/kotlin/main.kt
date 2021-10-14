@@ -1,3 +1,4 @@
+import java.util.*
 import kotlin.random.Random
 
 fun main(){
@@ -71,17 +72,25 @@ fun challengeFour(){
     println("You are almost at the end of your adventure \n " +
             "Before you can get to the final boss, you must choose the right portal to go trough \n" +
             "there are a hundred portals, so you must guess the right one (type in digits)")
-    val userAnswer = readLine()
+    val userAnswer = Scanner(System.`in`)
+    val numberAnswer:Int = userAnswer.nextInt()
     val random = Random.nextInt(1,100)
-    val randomString = random.toString()
 
-    if (userAnswer == randomString){
+    if (numberAnswer == random){
         println("You found the right portal!")
         challengeFive()
+    }else if(numberAnswer < random){
+        println("You have to guess higher!")
+        readLine()
+    }else if(numberAnswer > random){
+        println("You have to guess lower!")
+        readLine()
     }
 }
 
-che
+fun challengeFive(){
+
+}
 fun win(){
     println("WOHOOO you can go to the next level now!")
 }
